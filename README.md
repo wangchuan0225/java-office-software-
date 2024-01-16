@@ -1,2 +1,10 @@
-# -
+# 
+上手指南：以下指南将帮助你在本地安装运行该项目
+安装要求：Springboot，vue，php(有一部分代码使用php完成。具体运行所需的包在pol.xml中在idea中打开该文件后按更新所有包会自动下载。
+安装步骤：首先打开idea，将src文件打开，在/src/main/java/com/example/demo中有三个
+文件夹包括controlar，entity，mapper。controlar中接收用户请求解析请求并调用方法。
+entity包括了实体类和接口，定义了核心数据结构以及数据库相关方法，mapper包含了对数
+据库访问的对象，对entity和数据库进行链接。
+在software/components中包含了vue架构的前端代码,其他文件夹中包含了其他php代码和html的前端代码。
+~
 通过springboot和vue架构以及一些php语言实现对数据库的访问
