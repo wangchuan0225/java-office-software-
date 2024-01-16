@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta-----定义关键词 -->
+		<meta charset="utf-8">
+		<title>人事管理系统</title>
+        <!-- Stylesheet -- 定义一个外部加载的样式表 -->
+		<link rel="stylesheet" href="login.css"/>      
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<h3>人</h3>
+				<h3>事</h3>
+				<h3>管</h3>
+				<h3>理</h3>
+				<h3>系</h3>
+				<h3>统</h3>
+			</div>
+			<div class="right">
+				<h4>登 录</h4>
+				<form  action="login.php" method="post"  onsubmit="return enter()">
+					<!-- placeholder提供可描述输入字段预期值的提示信息 -->
+					<input class="acc" type="text"  name="username" placeholder="用户名"/>   
+					<input class="acc" type="password"  name="password" placeholder="密码"/>
+
+					<div class="down">
+						<label>权限：</label>
+						<label1><input type="radio" name="ren" value="student" checked="true">管理员</label1>
+						
+					</div>
+				<!-- 首先是在form标签中有一个onsubmit的属性，他有两个值分别是true和false，
+				如果true，这个网页就跳转到action属性的search_result.php页面，否则不跳转。 -->
+					<input class="submit" type="submit"  name="log" value="登录"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

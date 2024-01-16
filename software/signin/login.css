@@ -1,0 +1,161 @@
+* 通用选择器 */
+*{
+	margin: 0;      /*设置一个元素所有外边距的宽度*/
+	padding: 0;     /* 可以定义元素边框与元素内容之间的空间，即上下左右的内边距*/
+	box-sizing: border-box;
+} 
+
+
+/* a{
+	text-decoration: none;
+} */
+
+/* 页面背景 */
+html{
+	font-size: 8px;        /* 登录页面大小 */
+	background: url(11.jpg) no-repeat 100% fixed;
+	background-size: 100% 100%;
+}
+
+/* 页面前(html元素前) */
+html::before{
+	content: '';            /*添加内容*/
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;                        /* z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面*/
+	backdrop-filter:blur(0.8rem);       /* 可以让一个元素后面区域添加图形效果（如模糊或颜色偏移）*/     /*大背景图*/
+}
+
+/* ::selection选择器 */
+/* 选中的文本是蓝色背景，白色的字体 */
+::selection{
+	color: #FFFFFF;
+	background-color: rgb(81, 67, 214);
+}
+
+/* box盒子的设置 */
+.box{
+	display: flex;       /*弹性布局*/
+	overflow: hidden;    /*溢出隐藏*/
+	width: 90rem;
+	height: 55rem;
+	border-radius: 1.5rem;   /*外边框边角*/
+	margin: 10% auto;        /*设置一个元素所有外边距的宽度*/
+	/* box-shadow: 0 0 1rem 0.2rem rgb(0 0 0 / 10%); */       /*添加阴影，增加立体感*/
+}
+
+.box .left{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	/* background-color: skyblue; */
+}
+
+/* 插入左侧图片 */
+.box .left::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(44.jpg) no-repeat ;
+	background-size: cover;
+	opacity: 80%;             /*设置或返回元素的不透明度*/
+}
+.box .left h3{
+	color: rgb(5, 5, 5);
+	font-size: 4rem;
+	margin-top: 2rem;
+	margin-left: 20rem;
+}
+.box .right{
+	display: flex;        /*弹性布局*/
+	width: 50%;
+	/* 指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向) */
+	flex-direction: column; 		/* column: 作为列，垂直地显示弹性项目。 */
+	/* align-items :弹性容器内的项目指定默认对齐方式。 */
+	align-items: center;            /*项目位于容器的中央*/
+	background-color: rgba(255, 255, 255, 0.8);  /* 0.8---透明度 */
+}
+
+/* 开头登录二字字体 */
+.box .right h4{
+	color: rgb(20, 179, 203);
+	font-size: 3rem;
+	margin-top: 5rem;
+	
+}
+
+.box .right form{
+	display: flex;
+	/* 指定 flex 元素单行显示还是多行显示。如果允许换行，这个属性允许你控制行的堆叠方向。 */
+	flex-wrap: wrap;           /*允许换行*/
+	/* 定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。 */
+	justify-content: center;   /* 居中排列 */
+}
+
+/* 输入框 */
+.box .right form .acc{
+	outline: none;       /*外框样式*/
+	width: 60%;
+	height: 5rem;
+	font-size: 1.6rem;
+	margin-top: 5rem;     /*上边距*/
+	padding: 0 0 0 1.6rem;       /* 可以定义元素边框与元素内容之间的空间，即上下左右的内边距*/
+	border: none;         /* 去掉输入框的边框 */
+	border-bottom: 1px solid rgb(144,129,241);  /*下边框*/
+	/* color: rgb(144,129,241); */
+	background-color: rgba(0,0,0,0);
+}
+/* CSS伪类 :focus 表示获得焦点的元素（如表单输入） */
+.right form .acc:focus{ 
+	outline: none;
+	color:#FF7F50;
+	
+	padding: 0 0 0 1.6rem;      /*内边距*/
+}
+
+/* 登入按钮 */
+.submit{
+	width: 500px;
+	height: 5rem;
+	color: #f6f6f6;
+	background: linear-gradient(120deg, #4b068ba7 0%, #076cd1c7 100%);   /*设置渐变*/
+	font-size: 1.4rem;
+	border: none;
+	border-radius: 0.5rem;       /*外边框边角*/
+	margin: 6rem 0 0 50%;        /*设置一个元素所有外边距的宽度*/
+	transform: translateX(-50%);  /*定义转换，只是用 X 轴的值。*/
+}
+
+/* :hover 选择器用于选择鼠标指针浮动在上面的元素。 */
+.right .submit:hover{
+	box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 /15%);    /*添加阴影，增加立体感*/
+}
+
+.right .down{
+	display: flex;           /*弹性布局*/
+	justify-content: space-between;   /* justify-content: space-between; 均匀排列每个元素,首个元素放置于起点，末尾元素放置于终点 */
+	margin-top: 1rem;        /*上边距*/
+	width: 60%;
+}
+
+/* right盒子中down部分中a的设置 */
+.right .down label{
+	font-size: 2rem;
+	margin-top: 5rem;       /*上边距*/
+	padding: 1rem 2rem;    
+	color: #666;
+}
+
+.right .down label1{
+	font-size: 2rem;
+	margin-top: 5rem;       /*上边距*/
+	padding: 1rem 2rem;    
+	color: #666;
+}
+
+/* :hover 选择器用于选择鼠标指针浮动在上面的元素。 */
+.right .down label1:hover{
+	color: rgb(144,129,241);
+}

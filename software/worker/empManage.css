@@ -1,0 +1,84 @@
+#background{
+    background-color: #f0f0f0;width: 100%;height: 100%;
+    display: flex;flex-direction: column;align-items: center;
+}
+/* 搜索框div */
+#search-frame{
+    display: flex;margin-top: 10px;width: 70%;position: relative;
+}
+/* 搜索框input */
+#search{
+    width: 100%;height: 32px;padding: 0px 10px 0px 10px;
+}
+/* 搜索图片和按钮div */
+#search-div{
+    border-radius: 50%;position: absolute;right: 10px;bottom: 1px;
+    width: 30px;height: 30px;
+}
+#search-div button{
+    border-radius: 50%;border: none;width: 30px;height: 30px;padding: 0px;
+    background-color: #fff;
+}
+#search-div button img{
+    width: 20px;
+}
+/* 每个页面的正文信息 */
+#context{
+    display: flex;flex-direction: column;width: 70%;margin-top: 20px
+}
+/* 搜索页面每行的员工信息 */
+.empInfo{
+    display: flex;flex-direction: row;margin: 4px auto 0px auto;padding: 10px 0px;
+    border-top: 1px solid black;width: 100%;background-color: #fcfcfc;
+}
+/* 搜索页面右下角的添加员工按钮 */
+#add-div{
+    position: fixed;bottom: 40px;right: 40px;width: 60px;height: 60px;
+    border-radius: 50%;background-color: #aaaaaa;
+}
+#add-div a{
+    border-radius: 50%;width: 100%;height: 100%;border: none;background-color: #fcfcfc;
+    display: flex;
+}
+a img{
+    margin: auto;width: 32px;
+}
+/* 员工信息页面的每一行 */
+.col{
+    display: flex;flex-direction: row;margin: 4px auto 0px auto;width: 100%;
+    border-bottom: black solid 1px;background-color: #fcfcfc;padding: 10px 0px;
+}
+.col-Name{
+    width: 30%;text-align: center;
+}
+.col-Value{
+    width: 50%;text-align: center;
+}
+/* 员工信息页面右下角的保存按钮 */
+#submit-div{
+    position: fixed;bottom: 40px;right: 40px;width: 60px;height: 60px;
+    border-radius: 50%;background-color: #aaaaaa;
+}
+#submit-div button{
+    border-radius: 50%;width: 100%;height: 100%;border: none;background-color: #fcfcfc;
+}
+/* 页面左下角的返回按钮 */
+#return-div{
+    position: fixed;bottom: 40px;left: 40px;width: 60px;height: 60px;
+    border-radius: 50%;background-color: #aaaaaa;
+}
+#return-div a{
+    border-radius: 50%;width: 100%;height: 100%;border: none;background-color: #fcfcfc;
+    display: flex;
+}
+a img{
+    margin: auto;width: 32px;
+}
+/* 员工信息页面左下角的删除按钮 */
+#delete-div{
+    position: fixed;bottom: 140px;left: 40px;width: 60px;height: 60px;
+    border-radius: 50%;background-color: #222222;
+}
+#delete-div button{
+    border-radius: 50%;width: 100%;height: 100%;border: none;background-color: #fcfcfc;
+}

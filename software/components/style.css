@@ -1,0 +1,43 @@
+/* 设置页面背景颜色 */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* 设置表格样式 */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 添加查询表单样式 */
+.query-form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.query-input {
+    padding: 10px;
+    width: 200px;
+}
+
+.query-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
